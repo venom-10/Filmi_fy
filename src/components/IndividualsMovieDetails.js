@@ -60,7 +60,7 @@ export default function MovieDetails() {
   return (
     <>
       {title && overview ? (
-        <div className="__main bg-gray-700 dark:bg-gray-200 h-screen">
+        <div className="__main bg-gray-700 dark:bg-gray-200 h-screen font-primry">
           <div className="bg-gray-700 dark:bg-gray-200 mob:h-screen flex justify-center items-center">
             <div className={!showForm ? class2 : class1}>
               <div className="details_img rounded-lg p-2 bg-gray-600">

@@ -9,17 +9,17 @@ export default function Search() {
   const name = searchParams.get("q");
   const api = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_KEY}&query=${name}`;
   useEffect(() => {
-    async function getMovies() {
+    async function getSearchMovie() {
       const response = await fetch(api);
       const data = await response.json();
       setMovies(data.results);
     }
-    getMovies();
-  }, []);
+    getSearchMovie();
+  }, [name]);
 
   return (
     <>
-      <div className="__main bg-gray-700 dark:bg-gray-200">
+      <div className="__main bg-gray-700 dark:bg-gray-200 font-primry">
         <div className="flex justify-center flex-wrap items-center pt-16">
           {Movies.map((Movie, id) => (
             <MovieCard

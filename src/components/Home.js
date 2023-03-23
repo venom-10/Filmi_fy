@@ -18,7 +18,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="__main bg-gray-700 dark:bg-gray-200">
+      <div className="__main bg-gray-700 dark:bg-gray-200 font-primry">
         <div className="flex justify-center flex-wrap items-center pt-16">
           {Movies.map((Movie, id) => (
             <MovieCard
