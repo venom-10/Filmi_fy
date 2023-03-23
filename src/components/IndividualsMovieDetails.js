@@ -93,7 +93,7 @@ export default function MovieDetails() {
                   {title}
                 </p>
                 <p className="text-gray-200 font-medium text-base dark:text-gray-800">
-                  {/* {overview}  */}
+                  {overview} 
                 </p>
                 <button
                   onClick={() => {
