@@ -1,14 +1,13 @@
-import { useState, useEffect }  from 'react'
-import { useSearchParams } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 
-import MovieCard from './MovieCard';
+import MovieCard from "./MovieCard";
 
 export default function Search() {
   const [Movies, setMovies] = useState([]);
   const [searchParams] = useSearchParams();
-  const name = searchParams.get('q')
-  const api =
-    `https://api.themoviedb.org/3/search/movie?api_key=ea36bdeb4a287433d73a0a47fbf39fd2&query=${name}`;
+  const name = searchParams.get("q");
+  const api = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_KEY}&query=${name}`;
   useEffect(() => {
     async function getMovies() {
       const response = await fetch(api);

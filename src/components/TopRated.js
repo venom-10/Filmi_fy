@@ -6,7 +6,7 @@ export default function TopRated() {
   const [Movies, setMovies] = useState([]);
   const loc = useLocation().pathname
   const api =
-    "https://api.themoviedb.org/3/movie/top_rated?api_key=ea36bdeb4a287433d73a0a47fbf39fd2&language=en-US&page=1";
+    `https://api.themoviedb.org/3/movie/top_rated?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`;
   useEffect(() => {
     async function getMovies() {
       const response = await fetch(api);
